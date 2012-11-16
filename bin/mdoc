@@ -1,0 +1,48 @@
+#!/usr/bin/env node
+
+var exec = require('child_process').exec,
+  program = require('commander'),
+  fs = require('fs'),
+  mkdirp = require('mkdirp');
+
+var eol = 'win32' == os.platform() ? '\r\n' : '\n';
+
+var site_js = [
+  'var mdoc = require(\'mdoc\');',
+  'var site = new mdoc.Site();',
+  '',
+  'if (!module.parent) {',
+  '  site.start(3000);',
+  '  console.log(\'Site listening on port 3000\');',
+  '} else {',
+  '  module.exports = site;',
+  '}'
+].join(eol);
+
+
+function mkdir(path, fn) {
+  mkdirp(path, 755, function(err){
+    if (err) throw err;
+    console.log('   \033[36mcreate\033[0m : ' + path);
+    if(fn) fn();
+  });
+}
+
+function write(path, str) {
+  fs.writeFile(path, str);
+  console.log('   \x1b[36mcreate\x1b[0m : ' + path);
+}
+
+function createSite() {
+  mkdir('docs');
+  mkdir('public');
+  mkdir('themes');
+  write('site.js', site_js);
+}
+
+program
+  .command('create-site')
+  .description('Create a base site for mdoc.')
+  .action(createSite);
+program
+	.parse(process.argv);

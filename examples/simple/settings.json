@@ -1,0 +1,13 @@
+{
+	"theme": "default",
+	"title": "Simple",
+	"menus": {
+		"navigation": [
+			{
+				"title": "First",
+				"url": "/",
+				"items": []
+			}
+		]
+	}
+}
