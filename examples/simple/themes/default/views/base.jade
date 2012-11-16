@@ -1,12 +1,13 @@
 doctype 5
 html(lang="en")
   head
-    title= title
+    title= title + ' - ' + site.title
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(name="description", content="")
     meta(name="author", content="")
 
+    link(href="/css/normalize.css", rel="stylesheet")
     link(href="/css/default.css", rel="stylesheet")
 
     <!--[if lt IE 9]>
@@ -14,4 +15,31 @@ html(lang="en")
     <![endif]-->
 
   body
-    block content
+    header
+        a(href="/")= site.title
+    div.container
+        nav
+            ul
+                -var navigation = site.menus.navigation
+                - for (var k1 in navigation)
+                    - var l1 = navigation[k1]
+                    li
+                        span= l1.title
+                        ul
+                            - for (var k2 in l1.items)
+                                - var l2 = l1.items[k2]
+                                - if (l2.url == url)
+                                    li.selected 
+                                        a(href=l2.url)= l2.title
+                                - else
+                                    li 
+                                        a(href=l2.url)= l2.title
+        section
+            block content
+    footer
+        ul
+            -var footer = site.menus.footer
+            - for (var k1 in footer)
+            - var l1 = footer[k1]
+            li
+                a(href=l1.url)= l1.title

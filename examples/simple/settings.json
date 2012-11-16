@@ -1,12 +1,20 @@
 {
 	"theme": "default",
-	"title": "Simple",
+	"title": "Simple docs for apps with markdown",
 	"menus": {
 		"navigation": [
 			{
-				"title": "First",
-				"url": "/",
-				"items": []
+				"title": "Getting Started",
+				"items": [
+					{ "title": "Home", "url": "/" },
+					{ "title": "Next", "url": "/next" }
+				]
+			}
+		],
+		"footer": [
+			{
+				"title": "Home",
+				"url": "/"
 			}
 		]
 	}
