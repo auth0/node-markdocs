@@ -1,12 +1,5 @@
-html {
+html, body {
 	background-color: #E8EBEF;
-}
-
-body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	line-height: 20px;
-	color: #333;
 }
 
 header {
@@ -22,6 +15,10 @@ header a {
 	color: #222;
 	text-decoration: none;
 	text-shadow: 0 1px 0 white;
+}
+
+header a:hover {
+	text-decoration: none;
 }
 
 footer {
@@ -155,70 +152,8 @@ footer ul li a:hover {
 	min-height: 400px;
 }
 
-h1 {
-	font-size: 25px;
-	font-weight: 700;
-	margin: 10px 0 20px 0;
-	padding: 0;
-}
-
-h2 {
-	font-size: 19px;
-	font-weight: bold;
-	color: #222;
-	margin: 10px 0 15px 0;
-}
-
-h3 {
-	font-size: 16px;
-	font-weight: bold;
-	color: #222;
-	margin: 10px 0 6px 0;
-}
-
-img {
-	max-width: 100%;
-}
-
-p {
-	margin: 5px 0 10px 0;
-	line-height: 19px;
-}
-
-a {
-	color: #008CDD;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-a:hover {
-	color: #222;
-	text-decoration: underline;
-}
-
-code, pre {
-	padding: 0 3px 2px;
-	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-	font-size: 13px;
-	color: #333;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-
-code {
-	padding: 2px 4px;
-	color: #D14;
-	background-color: #F7F7F9;
-	border: 1px solid #E1E1E8;
-}
-
 ul, ol {
 	list-style-position: outside;
-	padding: 0 0 0 18px;
-	margin: 0 0 10px 0;
-	font-size: 13px;
-	line-height: 19px;
 }
 
 ul li {

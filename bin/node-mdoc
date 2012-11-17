@@ -1,0 +1,88 @@
+#!/usr/bin/env node
+
+var exec = require('child_process').exec,
+  program = require('commander'),
+  fs = require('fs'),
+  os = require('os'),
+  fspath = require('path'),
+  mkdirp = require('mkdirp'),
+  wrench = require('wrench');
+
+var eol = 'win32' == os.platform() ? '\r\n' : '\n';
+
+//standalone
+var app_js = [
+  'var mdoc = require(\'node-mdoc\');',
+  'var docsapp = new mdoc.App();',
+  '',
+  'if (!module.parent) {',
+  '  docsapp.start(3000);',
+  '  console.log(\'Server listening on port 3000\');',
+  '} else {',
+  '  module.exports = docsapp;',
+  '}'
+].join(eol);
+
+
+//embedded
+var index_js = [
+  'var mdoc = require(\'node-mdoc\');',
+  '',
+  'module.exports = function (baseUrl, app) {',
+  '  return new mdoc.App(__dirname, baseUrl, app);',
+  '};'
+].join(eol);
+
+var index_md = [
+  '---',
+  'title: Index',
+  'url: /',
+  '---',
+  '',
+  '#First Page'
+].join(eol);
+
+var settings_json = [
+  '{}'
+].join(eol);
+
+
+function mkdir(path) {
+  mkdirp.sync(path, 0755);
+  console.log('   \033[36mcreate\033[0m : ' + path);
+}
+
+function write(path, str) {
+  fs.writeFileSync(path, str);
+  console.log('   \x1b[36mcreate\x1b[0m : ' + path);
+}
+
+function cpdir(source, target) {
+  wrench.copyDirSyncRecursive(source, target);
+  console.log('   \x1b[36mcopy\x1b[0m : ' + target);
+}
+
+function create(path) {
+  path = path || process.cwd();
+  mkdir(fspath.resolve(path, 'docs'));
+  mkdir(fspath.resolve(path, 'public'));
+  mkdir(fspath.resolve(path, 'themes'));
+  if (cmdCreate.embedded) {
+    write(fspath.resolve(path, 'index.js'), index_js);
+  } else {
+    write(fspath.resolve(path, 'app.js'), app_js);
+  }
+  write(fspath.resolve(path, 'settings.json'), settings_json);
+  write(fspath.resolve(path, 'docs', 'index.md'), index_md);
+  cpdir(fspath.resolve(__dirname, '../examples/themes/default'),
+    fspath.resolve(path, 'themes', 'default'));
+}
+
+cmdCreate = program
+  .command('create [path]')
+  .option('-e, --embedded', 'use for embedded app', Boolean, false)
+  .description('Create a base site for mdoc.')
+  .action(create);
+
+program
+	.parse(process.argv);

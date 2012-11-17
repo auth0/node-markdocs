@@ -1,4 +1,4 @@
-var mdoc = require('../..'),
+var mdoc = require('./docsapp'),
   express = require('express');
 
 var app = express();
@@ -13,6 +13,6 @@ app.get('/', function(req, res) {
   res.render('index', { title: 'Embedded with EJS' });
 });
 
-var site = new mdoc.Site(__dirname + '/docsite', '/docs', app);
+var docsapp = mdoc('/docs', app);
 
 app.listen(3000);

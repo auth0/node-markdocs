@@ -9,8 +9,8 @@
     "express": "3.0.3",
     "jade": "0.27.7",
     "less": "1.3.1",
-    "nconf": "0.6.5",
-    "markdown": "0.4.0"
+    "markdown": "0.4.0",
+    "wrench": "1.3.4"
   },
   "devDependencies": {
 
@@ -22,7 +22,7 @@
   "repository": "git://github.com/qraftlabs/node-mdoc",
   "main": "index",
   "bin": {
-    "mdoc": "./bin/mdoc"
+    "mdoc": "./bin/node-mdoc"
   },
   "engines": {
     "node": "*"

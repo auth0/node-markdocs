@@ -1,0 +1,21 @@
+{
+	"menus": {
+		"navigation": [
+			{
+				"title": "Menu",
+				"items": [
+					{
+						"title": "Home",
+						"url": "/"
+					},
+				]
+			}
+		],
+		"footer": [
+			{
+				"title": "Home",
+				"url": "/"
+			}
+		]
+	}
+}
