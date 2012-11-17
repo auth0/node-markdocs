@@ -16,7 +16,7 @@ html(lang="en")
 
   body
     header
-        a(href="/")= site.title
+        a(href=furl('/'))= site.title
     div.container
         nav
             ul
@@ -30,10 +30,10 @@ html(lang="en")
                                 - var l2 = l1.items[k2]
                                 - if (l2.url == url)
                                     li.selected 
-                                        a(href=l2.url)= l2.title
+                                        a(href=furl(l2.url))= l2.title
                                 - else
                                     li 
-                                        a(href=l2.url)= l2.title
+                                        a(href=furl(l2.url))= l2.title
         section
             block content
     footer
@@ -42,4 +42,4 @@ html(lang="en")
             - for (var k1 in footer)
             - var l1 = footer[k1]
             li
-                a(href=l1.url)= l1.title
+                a(href=furl(l1.url))= l1.title

@@ -1,0 +1,11 @@
+{
+  "name": "node-mdoc-embedded",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.0.3",
+    "ejs": "0.8.3"
+  },
+  "engines": {
+    "node": "*"
+  }
+}
