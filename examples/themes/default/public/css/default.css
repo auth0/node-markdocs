@@ -1,161 +1,161 @@
 html, body {
-	background-color: #E8EBEF;
+  background-color: #E8EBEF;
 }
 
 header {
-	width: 940px;
-	margin: 20px auto 30px;
+  width: 940px;
+  margin: 20px auto 30px;
 }
 
 header a {
-	display: inline-block;
-	padding: 5px;
-	font-weight: bold;
-	font-size: 24px;
-	color: #222;
-	text-decoration: none;
-	text-shadow: 0 1px 0 white;
+  display: inline-block;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #222;
+  text-decoration: none;
+  text-shadow: 0 1px 0 white;
 }
 
 header a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 footer {
-	width: 750px;
-	padding-left: 190px;
-	margin: 40px auto 60px;
-	font-size: 12px;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  width: 750px;
+  padding-left: 190px;
+  margin: 40px auto 60px;
+  font-size: 12px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 footer ul {
-	display: inline;
-	padding: 0;
+  display: inline;
+  padding: 0;
 }
 
 footer ul li {
-	display: inline;
-	padding-right: 15px;
-	list-style: none;
+  display: inline;
+  padding-right: 15px;
+  list-style: none;
 }
 
 footer ul li a {
-	color: #999;
-	text-decoration: none;
+  color: #999;
+  text-decoration: none;
 }
 
 footer ul li a:hover {
-	color: #222;
+  color: #222;
 }
 
 .container {
-	position: relative;
-	width: 940px;
-	margin: 0 auto;
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
 }
 
 .container > nav {
-	position: absolute;
-	z-index: 20;
-	width: 190px;
-	left: 0;
-	top: 4px;
-	bottom: 4px;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
-	border-radius: 5px 0 0 5px;
-	background: #EEE;
-	background: rgba(255, 255, 255, 0.25);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),0 0 1px 1px rgba(80, 84, 92, 0.1),0 1px 2px rgba(80, 84, 92, 0.2);
+  position: absolute;
+  z-index: 20;
+  width: 190px;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+  border-radius: 5px 0 0 5px;
+  background: #EEE;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),0 0 1px 1px rgba(80, 84, 92, 0.1),0 1px 2px rgba(80, 84, 92, 0.2);
 }
 
 .container > nav > ul {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .container > nav > ul > li  {
-	padding: 0;
-	margin: 0;
-	list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .container > nav > ul > li > span {
-	text-transform: uppercase;
-	font-size: 11px;
-	font-weight: bold;
-	color: #9CA5B5;
-	display: block;
-	margin: 20px 0 4px 0;
-	padding: 0 25px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  color: #9CA5B5;
+  display: block;
+  margin: 20px 0 4px 0;
+  padding: 0 25px;
 }
 
 .container > nav > ul ul {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .container > nav > ul ul > li {
-	list-style: none;
+  list-style: none;
 }
 
 .container > nav > ul ul > li > a {
-	margin-bottom: 1px;
-	font-size: 12px;
-	height: 21px;
-	line-height: 22px;
-	text-decoration: none;
-	color: #0068DE;
-	display: block;
-	padding: 1px 20px 1px 40px;
+  margin-bottom: 1px;
+  font-size: 12px;
+  height: 21px;
+  line-height: 22px;
+  text-decoration: none;
+  color: #0068DE;
+  display: block;
+  padding: 1px 20px 1px 40px;
 }
 .container > nav > ul ul > li > a:hover {
-	border-top: 1px solid rgba(156, 165, 181, 0.25);
-	border-bottom: 1px solid #CACDD3;
-	box-shadow: 1px 0 rgba(156, 165, 181, 0.08);
-	background: transparent;
-	background: -webkit-linear-gradient(white, #F0F2F5);
-	background: -moz-linear-gradient(white, #F0F2F5);
-	background: -ms-linear-gradient(white, #F0F2F5);
-	background: -o-linear-gradient(white, #F0F2F5);
-	background: linear-gradient(white, #F0F2F5);
-	padding: 0 20px 0 40px;
+  border-top: 1px solid rgba(156, 165, 181, 0.25);
+  border-bottom: 1px solid #CACDD3;
+  box-shadow: 1px 0 rgba(156, 165, 181, 0.08);
+  background: transparent;
+  background: -webkit-linear-gradient(white, #F0F2F5);
+  background: -moz-linear-gradient(white, #F0F2F5);
+  background: -ms-linear-gradient(white, #F0F2F5);
+  background: -o-linear-gradient(white, #F0F2F5);
+  background: linear-gradient(white, #F0F2F5);
+  padding: 0 20px 0 40px;
 }
 
 .container > nav > ul ul > li.selected > a {
-	padding: 0 20px 0 40px;
-	border-top: 1px solid #408CE6;
-	border-bottom: 1px solid #2659A7;
-	box-shadow: 0 -1px 0 rgba(17, 46, 97, 0.03),0 1px 0 rgba(17, 46, 97, 0.15);
-	background: #4B98EA;
-	background: transparent;
-	background: -webkit-linear-gradient(#4B98EA, #397ACD);
-	background: -moz-linear-gradient(#4B98EA, #397ACD);
-	background: -ms-linear-gradient(#4B98EA, #397ACD);
-	background: -o-linear-gradient(#4B98EA, #397ACD);
-	background: linear-gradient(#4B98EA, #397ACD);
-	font-weight: 700;
-	color: white;
-	box-shadow: inset 0 1px 0 #53A1EC;
-	text-shadow: 0 -1px 0 rgba(38, 89, 167, 0.75);
+  padding: 0 20px 0 40px;
+  border-top: 1px solid #408CE6;
+  border-bottom: 1px solid #2659A7;
+  box-shadow: 0 -1px 0 rgba(17, 46, 97, 0.03),0 1px 0 rgba(17, 46, 97, 0.15);
+  background: #4B98EA;
+  background: transparent;
+  background: -webkit-linear-gradient(#4B98EA, #397ACD);
+  background: -moz-linear-gradient(#4B98EA, #397ACD);
+  background: -ms-linear-gradient(#4B98EA, #397ACD);
+  background: -o-linear-gradient(#4B98EA, #397ACD);
+  background: linear-gradient(#4B98EA, #397ACD);
+  font-weight: 700;
+  color: white;
+  box-shadow: inset 0 1px 0 #53A1EC;
+  text-shadow: 0 -1px 0 rgba(38, 89, 167, 0.75);
 }
 
 .container > section {
-	position: relative;
-	z-index: 30;
-	background: white;
-	background: #fff;
-	margin-left: 190px;
-	border-radius: 5px;
-	box-shadow: 0 0 1px 1px rgba(80, 84, 92, 0.1),0 1px 2px rgba(80, 84, 92, 0.5);
-	padding: 20px 30px;
-	min-height: 400px;
+  position: relative;
+  z-index: 30;
+  background: white;
+  background: #fff;
+  margin-left: 190px;
+  border-radius: 5px;
+  box-shadow: 0 0 1px 1px rgba(80, 84, 92, 0.1),0 1px 2px rgba(80, 84, 92, 0.5);
+  padding: 20px 30px;
+  min-height: 400px;
 }
 
 ul, ol {
-	list-style-position: outside;
+  list-style-position: outside;
 }
 
 ul li {
-	list-style-type: square;
+  list-style-type: square;
 }

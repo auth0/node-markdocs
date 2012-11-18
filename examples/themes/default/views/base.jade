@@ -16,30 +16,30 @@ html(lang="en")
 
   body
     header
-        a(href=furl('/'))= site.title
+      a(href=furl('/'))= site.title
     div.container
-        nav
-            ul
-                -var navigation = site.menus.navigation
-                - for (var k1 in navigation)
-                    - var l1 = navigation[k1]
-                    li
-                        span= l1.title
-                        ul
-                            - for (var k2 in l1.items)
-                                - var l2 = l1.items[k2]
-                                - if (l2.url == url)
-                                    li.selected 
-                                        a(href=furl(l2.url))= l2.title
-                                - else
-                                    li 
-                                        a(href=furl(l2.url))= l2.title
-        section
-            block content
+      nav
+        ul
+          -var navigation = site.menus.navigation
+          - for (var k1 in navigation)
+            - var l1 = navigation[k1]
+            li
+              span= l1.title
+              ul
+                - for (var k2 in l1.items)
+                  - var l2 = l1.items[k2]
+                  - if (l2.url == url)
+                      li.selected 
+                        a(href=furl(l2.url))= l2.title
+                  - else
+                      li 
+                        a(href=furl(l2.url))= l2.title
+      section
+        block content
     footer
         ul
-            -var footer = site.menus.footer
-            - for (var k1 in footer)
+          -var footer = site.menus.footer
+          - for (var k1 in footer)
             - var l1 = footer[k1]
             li
-                a(href=furl(l1.url))= l1.title
+              a(href=furl(l1.url))= l1.title
