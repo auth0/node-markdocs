@@ -1,13 +1,13 @@
 {
   "theme": "default",
-  "title": "Simple docs for apps with markdown (embedded)",
+  "title": "Simple docs for apps with markdown",
   "menus": {
     "navigation": [
       {
-        "title": "Getting Started",
+        "title": "Menu",
         "items": [
           { "title": "Home", "url": "/" },
-          { "title": "Next", "url": "/next" }
+          { "title": "Format", "url": "/format" }
         ]
       }
     ],

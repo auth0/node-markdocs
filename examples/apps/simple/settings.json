@@ -4,10 +4,10 @@
   "menus": {
     "navigation": [
       {
-        "title": "Getting Started",
+        "title": "Menu",
         "items": [
           { "title": "Home", "url": "/" },
-          { "title": "Next", "url": "/next" }
+          { "title": "Format", "url": "/format" }
         ]
       }
     ],

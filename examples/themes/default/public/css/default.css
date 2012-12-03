@@ -2,6 +2,10 @@ html, body {
   background-color: #E8EBEF;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 header {
   width: 940px;
   margin: 20px auto 30px;
