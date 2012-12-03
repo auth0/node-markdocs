@@ -1,7 +1,7 @@
 {
   "name": "node-mdoc",
   "description": "Simple docs for apps with markdown",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Qraftlabs <hello@qraftlabs.com>",
   "dependencies": {
     "commander": "1.0.5",
