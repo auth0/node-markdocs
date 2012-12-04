@@ -30,7 +30,7 @@ app.get('/', function(req, res){
 });
 
 var markdocs = require('markdocs');
-var docsapp = markdocs('/docs', app);
+var docsapp = markdocs.App('/docs', app);
 
 app.listen(3000);
 ```
