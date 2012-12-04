@@ -1,15 +1,15 @@
-# node-mdoc
+# node-markdocs
 
 simple docs for apps with markdown
 
 ## Installation
 
-    $ npm install node-mdoc -g
+    $ npm install markdocs -g
 
 
 ## Create a standalone docs app
 
-    $ node-mdoc create
+    $ markdocs create
 
   Start the server:
 
@@ -17,7 +17,7 @@ simple docs for apps with markdown
 
 ## Create an embedded docs app
 
-    $ node-mdoc create docs -e
+    $ markdocs create docs -e
 
   Initialize the docs app from your express app:
 
@@ -29,8 +29,8 @@ app.get('/', function(req, res){
   res.send('Hello World');
 });
 
-var mdoc = require('./docs');
-var docsapp = mdoc('/docs', app);
+var markdocs = require('markdocs');
+var docsapp = markdocs('/docs', app);
 
 app.listen(3000);
 ```

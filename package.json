@@ -1,7 +1,7 @@
 {
   "name": "markdocs",
   "description": "Simple docs for apps with markdown",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Qraftlabs <hello@qraftlabs.com>",
   "dependencies": {
     "commander": "1.0.5",
@@ -19,10 +19,10 @@
     "markdown",
     "docs"
   ],
-  "repository": "git://github.com/qraftlabs/node-mdoc",
+  "repository": "git://github.com/qraftlabs/node-markdocs",
   "main": "index",
   "bin": {
-    "mdoc": "./bin/node-mdoc"
+    "markdocs": "./bin/markdocs"
   },
   "engines": {
     "node": "*"

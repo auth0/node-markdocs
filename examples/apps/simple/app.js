@@ -1,5 +1,5 @@
-var mdoc = require('../../..');
-var docsapp = new mdoc.App();
+var markdocs = require('../../..');
+var docsapp = new markdocs.App();
 
 if (!module.parent) {
   docsapp.start(3000);

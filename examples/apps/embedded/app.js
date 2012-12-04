@@ -1,4 +1,4 @@
-var mdoc = require('./docsapp'),
+var markdocs = require('./docsapp'),
   express = require('express');
 
 var app = express();
@@ -13,6 +13,6 @@ app.get('/', function(req, res) {
   res.render('index', { title: 'Embedded with EJS' });
 });
 
-var docsapp = mdoc('/docs', app);
+var docsapp = markdocs('/docs', app);
 
 app.listen(3000);
