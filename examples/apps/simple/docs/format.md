@@ -27,6 +27,15 @@ This is paragraph. Inline styles: `code`, **bold**, *italic*
 
 ---
 
+Another table
+
+| Col1    | Col 2                                              |
+|======== |====================================================|
+|**bold** | Some text                                          |
+| Plain   | @@site.title@@                                     |
+
+---
+
 <strong>Hi html!</strong>
 
 More on [Markdown Syntax Documentation](http://daringfireball.net/projects/markdown/syntax)
