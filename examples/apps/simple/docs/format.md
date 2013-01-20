@@ -27,7 +27,7 @@ This is paragraph. Inline styles: `code`, **bold**, *italic*
 
 ---
 
-Another table
+Another table:
 
 | Col1    | Col 2                                              |
 |======== |====================================================|
