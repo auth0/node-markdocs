@@ -36,4 +36,4 @@ app.listen(3000);
 ```
 ## License
 
-MIT - qraftlabs - 2012
+MIT - Auth0 2014
