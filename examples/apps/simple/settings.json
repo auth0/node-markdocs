@@ -7,7 +7,8 @@
         "title": "Menu",
         "items": [
           { "title": "Home", "url": "/" },
-          { "title": "Format", "url": "/format" }
+          { "title": "Format", "url": "/format" },
+          { "title": "Subtree Doc", "url": "/subtree/document"}
         ]
       }
     ],
