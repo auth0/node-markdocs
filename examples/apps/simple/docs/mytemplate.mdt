@@ -1,0 +1,7 @@
+# This is a template page
+
+## Part 1
+@@block('part1')@@
+
+## Part 2
+@@block('part2')@@
