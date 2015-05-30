@@ -2,8 +2,8 @@
   "name": "markdocs-embedded",
   "version": "0.0.1",
   "dependencies": {
-    "express": "3.0.3",
-    "ejs": "0.8.3"
+    "ejs": "0.8.3",
+    "express": "^4.12.4"
   },
   "engines": {
     "node": "*"
