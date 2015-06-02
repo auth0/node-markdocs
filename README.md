@@ -60,7 +60,51 @@ docsapp.addDocumentProcessor(markdocs.Processors.js);
 docsapp.addDocumentProcessor(markdows.Processors.markdown);
 ```
 
+### External Consumption of Content
+Markdocs supports the consumption of HTML content outside of the main side (for example embedding on a second site or using them in a SPA). You must set the options yourself from your host application as shown.
 
+**To return just the article HTML**
+
+Use embedded view: `response.locals.embedded = true`;
+
+You must also provide a `doc.embedded.jade` template view in your theme. Typically this view looks like the following, but you may want to customize it.
+
+```jade
+!= sections.content
+```
+**TO return the article data as JSON/JSONP**
+
+You must still provide the embedded view as shown above. In addition you can set the following.
+
+`response.locals.json = true` or `response.locals.jsonp = true`.
+
+Finally, in the JSON responses you can optionally include metadata by specifiying: `response.locals.include_metadata = true`;
+
+The easiest way to use all of these in your app is to add a prerender middleware to your markdocs app as follows.
+
+```js
+var embedded = function (req, res, next) {
+  res.locals.embedded = false;
+  res.locals.include_metadata = false;
+
+  if (req.query.e || req.query.callback) {
+    res.locals.embedded = true;
+  }
+
+  if (req.query.m) {
+    res.locals.include_metadata = true;
+  }
+
+  if (req.query.callback) {
+    res.locals.jsonp = true;
+  } else if (!req.accepts('html') && req.accepts('application/json')) {
+    res.locals.json = true;
+  }
+
+  next();
+};
+
+docsapp.addPreRender(embedded);
 
 ## Issue Reporting
 
