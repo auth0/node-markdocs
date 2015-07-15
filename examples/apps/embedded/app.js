@@ -4,10 +4,8 @@ var markdocs = require('./docsapp'),
 var app = express();
 
 
-app.configure(function(){
-  app.set('view engine', 'ejs');
-  app.set('views', __dirname + '/views');
-});
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
 
 app.get('/', function(req, res) {
   res.render('index', { title: 'Embedded with EJS' });
