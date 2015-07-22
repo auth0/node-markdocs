@@ -1,7 +1,7 @@
 {
   "name": "markdocs",
   "description": "Simple docs for apps with markdown",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "author": "Auth0",
   "dependencies": {
     "body-parser": "^1.12.4",
