@@ -1,5 +1,7 @@
 # node-markdocs
 
+**!!! PROJECT NO LONGER MAINTAINED !!!**
+
 simple docs for apps with markdown
 
 ## Installation
